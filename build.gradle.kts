@@ -33,6 +33,8 @@ buildscript {
   }
 }
 
+version = "v4.0.1"
+
 @Suppress("DSL_SCOPE_VIOLATION") plugins {
   id("build-logic.root-project")
   alias(libs.plugins.kotlin) apply false
