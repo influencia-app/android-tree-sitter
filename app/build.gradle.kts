@@ -30,15 +30,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    val commonSigning = signingConfigs.create("common") {
-        storeFile = file("dev.keystore")
-        keyAlias = "androidide"
-        storePassword = "ed68424fb109e5aa8146e4b86caa72e3"
-        keyPassword = "ed68424fb109e5aa8146e4b86caa72e3"
-    }
-
     buildTypes {
-        forEach { it.signingConfig = commonSigning }
         release {
             isMinifyEnabled = false
             proguardFiles(
